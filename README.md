@@ -44,3 +44,7 @@ large.png)](http://flattr.com/thing/633876/Android-robotfindskitten)
 
   * Icon artwork by [Sarah Morrison](http://tashari.org/)
 
+### Privacy Policy
+
+This app doesn't collect any information about its usage and has no Internet connectivity. Enjoy!
+
