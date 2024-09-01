@@ -4,6 +4,10 @@ import java.util.Random;
 
 import android.graphics.Color;
 
+/**
+ * A Thing that can be found.  Contains metadata of what type of thing it is, including color, character
+ * and description
+ */
 public class Thing {
     public final static int NKI = 0;
     public final static int KITTEN = 1;
@@ -22,6 +26,10 @@ public class Thing {
 
     private final static Random rand = new Random();
 
+    /**
+     * Constructor to define the Thing based on the enum provided
+     * @param type
+     */
     public Thing(int type) {
         this.type = type;
         if (type == ROBOT) {
@@ -31,15 +39,18 @@ public class Thing {
         }
     }
 
+    /**
+     * Sets the location on the screen
+     * @param x horizontal coordinate
+     * @param y vertical coordinate
+     */
     public void setLocation(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
     /**
-     * Gives the Thing a random color.
-     *
-     * @param t
+     * Gives the Thing a random color
      */
     public void randomizeColor() {
 
@@ -49,9 +60,7 @@ public class Thing {
     }
 
     /**
-     * Gives the Thing a random color.
-     *
-     * @param t
+     * Gives the Thing a random color with lighter connotations
      */
     public void randomizeColorLightBg() {
         color = Color.argb(255, rand.nextInt(256 - CONTRAST_SKEW),

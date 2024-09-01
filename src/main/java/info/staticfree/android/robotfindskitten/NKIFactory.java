@@ -46,7 +46,6 @@ public class NKIFactory {
                 final InputStream is = assets.open(asset);
                 loadNkiFile(is);
                 is.close();
-
             }
         }
         postAddMessages();
@@ -81,11 +80,10 @@ public class NKIFactory {
     /**
      * An NKI file is plain UTF-8 text, where each item is on its own line.
      *
-     * @param nkiFile
-     * @throws IOException
+     * @param nkiFile the specific non kitten item file to read
+     * @throws IOException If unable to read nki file
      */
     public void loadNkiFile(InputStream nkiFile) throws IOException {
-
         for (final BufferedReader isReader = new BufferedReader(new InputStreamReader(nkiFile,
                 "utf-8"), 16000); isReader.ready();) {
             mNki.add(isReader.readLine());
@@ -94,11 +92,10 @@ public class NKIFactory {
 
     /**
      * Pull in all the messages from a JSON file.
-     *
      * Eventually, one could have a JSON-serving URL for more!
      *
-     * @throws IOException
-     * @throws JSONException
+     * @throws IOException If unable to properly read file
+     * @throws JSONException If JSON is invalid
      */
     public void loadMessagesJson(InputStream jsonFile) throws IOException, JSONException {
 

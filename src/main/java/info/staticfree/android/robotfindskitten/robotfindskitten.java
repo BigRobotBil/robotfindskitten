@@ -252,7 +252,7 @@ public class robotfindskitten extends Activity implements OnGestureListener, OnC
     /**
      * MOVE 'ZIG' FOR GREAT JUSTICE.
      *
-     * @param d
+     * @param d Direction being input
      */
     public void moveRobot(Direction d) {
         final int width = rfkView.getBoardWidth();

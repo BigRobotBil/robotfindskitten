@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class RFKView extends ViewGroup {
 
-    private final List<Thing> mThings = new ArrayList<Thing>();
+    private final List<Thing> mThings = new ArrayList<>();
 
     private int mWidth = -1;
     private int mHeight;
