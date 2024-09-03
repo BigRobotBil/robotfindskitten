@@ -1,16 +1,30 @@
 plugins {
-    id('com.android.application') version '8.3.0'
+    id('com.android.application') version '8.6.0'
 }
 
 android {
     namespace = "info.staticfree.android.robotfindskitten"
+    defaultConfig {
+        compileSdk 34
+    }
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    compileSdk 34
+    buildToolsVersion '34.0.0'
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat'
-    implementation 'com.google.android.material:material'
-    implementation 'androidx.constraintlayout:constraintlayout'
-    testImplementation 'junit:junit:4.13.1'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+//    implementation libs.androidx.appcompat.v102
+//    implementation libs.appcompat
+//    implementation libs.google.material
+//    implementation libs.androidx.constraintlayout
+//    testImplementation libs.junit.v4131
+//    androidTestImplementation libs.androidx.junit.v112
+//    androidTestImplementation libs.androidx.espresso.core.v330
 }

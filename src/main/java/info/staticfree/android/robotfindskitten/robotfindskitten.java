@@ -56,15 +56,15 @@ import android.widget.Toast;
 public class robotfindskitten extends Activity implements OnGestureListener, OnClickListener {
     public enum InputMode {
         ANY_KEY, DIRECTIONAL, NO_INPUT
-    };
+    }
 
     public enum Direction {
         UP, RIGHT, DOWN, LEFT
-    };
+    }
 
     public enum GameState {
         INTRO, INGAME, ENDGAME
-    };
+    }
 
     static final int ABOUT_DIALOG = 0;
 
@@ -346,10 +346,9 @@ public class robotfindskitten extends Activity implements OnGestureListener, OnC
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.about:
-                showDialog(ABOUT_DIALOG);
-                return true;
+        if (item.getItemId() == R.id.about) {
+            showDialog(ABOUT_DIALOG);
+            return true;
         }
         return false;
     }
@@ -574,11 +573,10 @@ public class robotfindskitten extends Activity implements OnGestureListener, OnC
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.about:
-                showDialog(ABOUT_DIALOG);
-                break;
+        if (v.getId() == R.id.about) {
+            showDialog(ABOUT_DIALOG);
         }
 
+        // else throw
     }
 }
