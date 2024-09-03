@@ -16,15 +16,12 @@ android {
         targetCompatibility JavaVersion.VERSION_11
     }
     compileSdk 34
-    buildToolsVersion '34.0.0'
-}
 
-dependencies {
-//    implementation libs.androidx.appcompat.v102
-//    implementation libs.appcompat
-//    implementation libs.google.material
-//    implementation libs.androidx.constraintlayout
-//    testImplementation libs.junit.v4131
-//    androidTestImplementation libs.androidx.junit.v112
-//    androidTestImplementation libs.androidx.espresso.core.v330
+    defaultConfig {
+        applicationId "info.staticfree.android.robotfindskitten"
+        minSdkVersion 7
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+    }
 }
